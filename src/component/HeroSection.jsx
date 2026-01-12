@@ -11,7 +11,7 @@ const HeroSection = () => {
     >
       <div className="absolute inset-0 animate-[zoomIn_20s_ease-in-out_infinite_alternate]">
         <Image
-          src="/https://res.cloudinary.com/dudpopk4h/image/upload/v1768184125/background_kkt04f.png"
+          src="https://res.cloudinary.com/dudpopk4h/image/upload/v1768184125/background_kkt04f.png"
           alt="Fade X Play Barber Shop Interior"
           fill
           priority

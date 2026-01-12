@@ -23,7 +23,7 @@ const Header = () => {
           <div className="relative w-30 h-30 md:w-40 md:h-40 overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 rounded-full ">
             <Link href="/">
               <Image
-                src="/logo1.png"
+                src="https://res.cloudinary.com/dudpopk4h/image/upload/v1768184125/logo1_bzb19n.png"
                 alt="logo"
                 fill
                 className=" relative object-contain hover:scale-105 rounded-full transition-transform duration-300"
