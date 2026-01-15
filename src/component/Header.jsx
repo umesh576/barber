@@ -12,21 +12,20 @@ const Header = () => {
     { href: "/services", label: "Services" },
     { href: "/barbers", label: "Barbers" },
     { href: "/gallery", label: "Gallery" },
-    { href: "/booknow", label: "Book Now" },
     { href: "/contact", label: "Contact" },
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-black backdrop-blur-md border-b border-black shadow-sm ">
-      <div className="max-w-7xl  px-4 sm:px-6 lg:px-8 ">
+    <header className="sticky top-0 z-50 w-full bg-black">
+      <div className=" relative max-w-7xl  px-4 sm:px-6 lg:px-8 ">
         <div className="flex justify-between items-center h-16">
-          <div className="relative w-30 h-30 md:w-40 md:h-40 overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 rounded-full ">
+          <div className="relative w-28 h-12 sm:w-36 sm:h-14 md:w-40 md:h-14 lg:w-48 lg:h-16 overflow-hidden transition-all duration-300">
             <Link href="/">
               <Image
-                src="https://res.cloudinary.com/dudpopk4h/image/upload/v1768184125/logo1_bzb19n.png"
+                src="https://res.cloudinary.com/dudpopk4h/image/upload/v1768463832/new_logo_hmhtif.jpg"
                 alt="logo"
                 fill
-                className=" relative object-contain hover:scale-105 rounded-full transition-transform duration-300"
+                className="object-contain hover:scale-105 transition-transform duration-300"
                 priority
               />
             </Link>

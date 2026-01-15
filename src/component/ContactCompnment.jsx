@@ -120,7 +120,7 @@ const ContactCompnment = () => {
                 <div className="mb-8">
                   <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto overflow-hidden rounded-2xl shadow-2xl">
                     <Image
-                      src="/alll photos/cat.png"
+                      src="https://res.cloudinary.com/dudpopk4h/image/upload/v1768483651/shop_hwmake.jpg"
                       alt="Barber Shop Work Example"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-500"
@@ -133,7 +133,7 @@ const ContactCompnment = () => {
                   BOOK YOUR APPOINTMENT
                 </h3>
 
-                <p className="text-gray-800 text-lg mb-8 max-w-md">
+                <p className="text-gray-800 text-lg mb-8 max-w-md text-justify">
                   Ready for your transformation? Book now and experience premium
                   grooming
                 </p>

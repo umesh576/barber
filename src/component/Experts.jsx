@@ -10,7 +10,8 @@ const Experts = () => {
       role: "Co-Founder & Master Barber",
       description:
         "With over a decade of experience in the grooming industry, Bipin brings unmatched artistry and precision to every cut. He specializes in modern fades and classic styles that never go out of fashion.",
-      image: "/alll photos/cat.png",
+      image:
+        "https://res.cloudinary.com/dudpopk4h/image/upload/v1768483834/barber2_xvxk7e.jpg",
       specialties: ["Modern Fades", "Classic Styles", "Precision Cutting"],
       experience: "10+ years",
     },
@@ -20,7 +21,8 @@ const Experts = () => {
       role: "Co-Founder & Master Barber",
       description:
         "A true perfectionist who treats every client like family. Bimal is known for his transformative styles and meticulous attention to detail that consistently sets new trends in the community.",
-      image: "/alll photos/cat.png",
+      image:
+        "https://res.cloudinary.com/dudpopk4h/image/upload/v1768483833/barber_1_vc0p2r.jpg",
       specialties: ["Transformative Styles", "Trend Setting", "Detail Work"],
       experience: "8+ years",
     },
@@ -71,7 +73,7 @@ const Experts = () => {
               </div>
 
               {/* Barber Info */}
-              <div className="p-8 md:p-10">
+              <div className="p-8 md:p-10 ">
                 <div className="flex items-start justify-between mb-4">
                   <div>
                     <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
@@ -84,7 +86,7 @@ const Experts = () => {
                   </div>
                 </div>
 
-                <p className="text-gray-300 mb-8 leading-relaxed text-lg">
+                <p className="text-gray-300 mb-8 leading-relaxed text-lg text-justify">
                   {barber.description}
                 </p>
 
