@@ -1,21 +1,33 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { MapPin, Phone, Clock } from "lucide-react";
+import { useRouter } from "next/navigation";
+import BookAppointment from "./BookAppointment";
+import { useState } from "react";
 
 const ContactCompnment = () => {
+  const router = useRouter();
+  const [showBooking, setShowBooking] = useState(false); // ✅
+  const handleLocation = () => {
+    router.push("https://maps.app.goo.gl/fSk4AxiWRijQkXDY9");
+  };
+
   return (
     <section
       id="contact"
-      className="bg-gradient-to-br from-gray-900 to-black text-white py-16 md:py-24"
+      className="bg-linear-to-br from-gray-900 to-black text-white py-16 md:py-24"
     >
+      {/* ✅ Booking Modal */}
+      {showBooking && <BookAppointment onClose={() => setShowBooking(false)} />}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-block px-6 py-2 bg-amber-500/10 rounded-full text-amber-400 font-semibold text-sm tracking-wide mb-4">
             Get In Touch
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-amber-200 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-linear-to-r from-white to-amber-200 bg-clip-text text-transparent">
             Visit Us Today
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
@@ -25,11 +37,11 @@ const ContactCompnment = () => {
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Info Cards */}
-          <div className="space-y-6">
+          <div className="space-y-6" onClick={handleLocation}>
             {/* Location Card */}
             <div className="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-amber-500/20 hover:border-amber-500/40 transition-all duration-300 hover:bg-white/8 group">
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-amber-500/20 to-amber-600/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 bg-linear-to-br from-amber-500/20 to-amber-600/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                   <MapPin className="w-6 h-6 text-amber-400" />
                 </div>
                 <h3 className="text-2xl font-bold text-amber-400">Location</h3>
@@ -45,7 +57,7 @@ const ContactCompnment = () => {
             {/* Phone Card */}
             <div className="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-amber-500/20 hover:border-amber-500/40 transition-all duration-300 hover:bg-white/8 group">
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-amber-500/20 to-amber-600/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 bg-linear-to-br from-amber-500/20 to-amber-600/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Phone className="w-6 h-6 text-amber-400" />
                 </div>
                 <h3 className="text-2xl font-bold text-amber-400">Phone</h3>
@@ -65,7 +77,7 @@ const ContactCompnment = () => {
             {/* Hours Card */}
             <div className="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-amber-500/20 hover:border-amber-500/40 transition-all duration-300 hover:bg-white/8 group">
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-amber-500/20 to-amber-600/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 bg-linear-to-br from-amber-500/20 to-amber-600/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Clock className="w-6 h-6 text-amber-400" />
                 </div>
                 <h3 className="text-2xl font-bold text-amber-400">
@@ -97,7 +109,7 @@ const ContactCompnment = () => {
 
           {/* Booking Card */}
           <div className="relative">
-            <div className="relative h-full bg-gradient-to-br from-amber-400 via-amber-500 to-yellow-500 rounded-3xl p-8 lg:p-12 shadow-2xl shadow-amber-500/30 overflow-hidden">
+            <div className="relative h-full bg-linear-to-br from-amber-400 via-amber-500 to-yellow-500 rounded-3xl p-8 lg:p-12 shadow-2xl shadow-amber-500/30 overflow-hidden">
               {/* Background Pattern */}
               <div className="absolute inset-0 opacity-10">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.3)_0%,transparent_50%)]"></div>
@@ -127,19 +139,21 @@ const ContactCompnment = () => {
                 </p>
 
                 <div className="space-y-4 w-full max-w-sm">
-                  <Link
+                  <button
+                    onClick={() => setShowBooking(true)}
                     href="#booknow"
                     className="block w-full bg-black text-white py-4 px-8 rounded-full font-bold text-lg hover:bg-gray-900 transform hover:-translate-y-1 transition-all duration-300 shadow-xl text-center"
                   >
                     BOOK NOW
-                  </Link>
+                  </button>
 
-                  <Link
+                  <button
+                    onClick={() => setShowBooking(true)}
                     href="tel:9818162449"
                     className="block w-full bg-transparent border-2 border-black text-black py-4 px-8 rounded-full font-bold text-lg hover:bg-black hover:text-white transform hover:-translate-y-1 transition-all duration-300 text-center"
                   >
                     CALL US DIRECTLY
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>

@@ -3,7 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { AiFillTikTok } from "react-icons/ai";
+import { useState } from "react";
 const HeroSection = () => {
+  const [bookapponment, setBookApponment] = useState(false);
   return (
     <div
       id="home"

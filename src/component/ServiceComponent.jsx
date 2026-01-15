@@ -8,7 +8,7 @@ const ServicesSection = () => {
       title: "Classic Haircut",
       description:
         "Timeless styles tailored to your personality and lifestyle. Our barbers bring years of experience to every cut, ensuring you leave looking sharp and confident.",
-      icon: "/alll photos/classichaircut.png",
+      icon: "https://res.cloudinary.com/dudpopk4h/image/upload/v1768462568/hentlemanspackage_yyq7vd.png",
       alt: "Haircut Icon",
     },
     {
@@ -16,7 +16,7 @@ const ServicesSection = () => {
       title: "Clean Fades",
       description:
         "Precision fades that blend perfectly. From low to high, skin to taper — we've mastered the art of the fade with attention to every detail.",
-      icon: "/fade.png",
+      icon: "https://res.cloudinary.com/dudpopk4h/image/upload/v1768462568/fade_gntyvs.png",
       alt: "Fade Icon",
     },
     {
@@ -24,7 +24,7 @@ const ServicesSection = () => {
       title: "Beard Grooming",
       description:
         "Shape, trim, and style your beard to perfection. Complete with hot towel treatment and premium products for the ultimate grooming experience.",
-      icon: "/beard grooming.png",
+      icon: "https://res.cloudinary.com/dudpopk4h/image/upload/v1768462568/beard_grooming_gnr5bb.png",
       alt: "Beard Grooming Icon",
     },
     {
@@ -32,7 +32,7 @@ const ServicesSection = () => {
       title: "Hair Styling",
       description:
         "Bold designs and modern styles. Express yourself with custom styling that makes a statement and turns heads wherever you go.",
-      icon: "/hairstyling.png",
+      icon: "https://res.cloudinary.com/dudpopk4h/image/upload/v1768462568/hairstyling_o9s89b.png",
       alt: "Hair Styling Icon",
     },
     {
@@ -40,7 +40,7 @@ const ServicesSection = () => {
       title: "Gentleman's Package",
       description:
         "The complete experience: haircut, beard trim, hot towel service, and professional styling. Walk out looking and feeling your absolute best.",
-      icon: "/hentlemanspackage.png",
+      icon: "https://res.cloudinary.com/dudpopk4h/image/upload/v1768462568/hentlemanspackage_yyq7vd.png",
       alt: "Gentleman's Package Icon",
     },
     {
@@ -48,7 +48,7 @@ const ServicesSection = () => {
       title: "Hair Coloring",
       description:
         "Transform your look with professional coloring services. From subtle highlights to bold transformations, we bring your vision to life.",
-      icon: "/haircoloring.png",
+      icon: "https://res.cloudinary.com/dudpopk4h/image/upload/v1768462569/haircoloring_i5fwjl.png",
       alt: "Hair Coloring Icon",
     },
   ];
@@ -56,7 +56,7 @@ const ServicesSection = () => {
   return (
     <section
       id="services"
-      className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white"
+      className="py-16 md:py-24 bg-linear-to-b from-gray-50 to-white"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -81,7 +81,7 @@ const ServicesSection = () => {
               className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden"
             >
               {/* Top gradient border */}
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-500 to-yellow-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+              <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-amber-500 to-yellow-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
 
               {/* Service Icon */}
               <div className="mb-6 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
@@ -102,7 +102,7 @@ const ServicesSection = () => {
               </h3>
 
               {/* Service Description */}
-              <p className="text-gray-600 leading-relaxed mb-6">
+              <p className="text-gray-600 leading-relaxed mb-6 text-justify">
                 {service.description}
               </p>
 
@@ -125,14 +125,14 @@ const ServicesSection = () => {
               </div>
 
               {/* Hover Effect Background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-50/0 via-amber-50/0 to-amber-50/0 group-hover:from-amber-50/10 group-hover:via-amber-50/5 group-hover:to-amber-50/10 transition-all duration-500 rounded-2xl"></div>
+              <div className="absolute inset-0 bg-linear-to-br from-amber-50/0 via-amber-50/0 to-amber-50/0 group-hover:from-amber-50/10 group-hover:via-amber-50/5 group-hover:to-amber-50/10 transition-all duration-500 rounded-2xl"></div>
             </div>
           ))}
         </div>
 
         {/* CTA Section */}
         <div className="mt-20 text-center">
-          <div className="inline-flex flex-col sm:flex-row items-center gap-6 bg-gradient-to-r from-amber-50 to-yellow-50 rounded-2xl p-8 shadow-lg">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-6 bg-linear-to-r from-amber-50 to-yellow-50 rounded-2xl p-8 shadow-lg">
             <div className="text-left">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">
                 Ready for Your Transformation?
