@@ -1,7 +1,11 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
+import BookAppointment from "./BookAppointment";
 
 const ServicesSection = () => {
+  const [showBook, setshowBook] = useState(false);
+
   const services = [
     {
       id: 1,
@@ -58,6 +62,12 @@ const ServicesSection = () => {
       id="services"
       className="py-16 md:py-24 bg-linear-to-b from-gray-50 to-white"
     >
+      {showBook && (
+        <div>
+          <BookAppointment onClose={() => setshowBook(false)} />
+        </div>
+      )}
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-20">
@@ -141,12 +151,12 @@ const ServicesSection = () => {
                 Book your appointment today and experience premium grooming
               </p>
             </div>
-            <a
-              href="#booknow"
-              className="px-8 py-4 bg-linear-to-r from-amber-500 to-yellow-500 text-white font-bold rounded-full hover:from-amber-600 hover:to-yellow-600 transform hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl whitespace-nowrap"
+            <button
+              onClick={() => setshowBook(true)}
+              className="px-8 py-4 bg-linear-to-r cursor-pointer from-amber-500 to-yellow-500 text-white font-bold rounded-full hover:from-amber-600 hover:to-yellow-600 transform hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl whitespace-nowrap"
             >
               BOOK NOW
-            </a>
+            </button>
           </div>
         </div>
       </div>
